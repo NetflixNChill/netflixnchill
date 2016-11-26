@@ -18,7 +18,7 @@ function loadDrink(e) {
     $.each(data.drinks, function(req, res){
       var drinkSubGroup = $('<div class="subgroup"></div>')
         drinkSubGroup.append($('<h1 class="drinkTitle"></h1>').text(res.strDrink));
-        drinkSubGroup.append($('<p class="drinkPic"></p>').attr('href',res.strDrinkThumb));
+        drinkSubGroup.append($('<img class="drinkPic"></img>').attr('src',res.strDrinkThumb));
 
         drinkSubGroup.append($('<h3 class="drinkIngredientList"></h3>').text('Ingredients'));
         drinkSubGroup.append($('<p class="drinkIngredient"></p>').text(res.strMeasure1 + res.strIngredient1));
@@ -72,7 +72,7 @@ $(function() {
         netflixSubGroup.append($('<p class="movieRating"></p>').text(data.Genre));
         netflixSubGroup.append($('<p class="moviePlot"></p>').text(data.Plot));
         netflixSubGroup.append($('<p class="movieScore"></p>').text(data.imdbRating + '/10'));
-        
+
         netflixGroup.append(netflixSubGroup);
         $('.netflixContent').empty().append(netflixGroup).show('slow');
     })
