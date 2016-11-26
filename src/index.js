@@ -1,0 +1,28 @@
+$(function() {
+  //...
+  $('.action').on('click', function() {
+    $.ajax({
+      url: 'https://random-movie.herokuapp.com/random',
+      dataType:'jsonp'
+    }).then(function(data){
+      console.log(data);
+      var netflixGroup = $('<div class="netflixGroup"></div>');
+      var netflixSubGroup = $('<div class="netflixSubGroup"></div>');
+        netflixSubGroup.append($('<h2 class="movieName"></h2>').text(data.Title));
+        netflixSubGroup.append($('<p class="movieYear"></p>').text(data.Year));
+        netflixSubGroup.append($('<p class="movieRating"></p>').text(data.Rated));
+        netflixSubGroup.append($('<p class="movieActors"></p>').text(data.Actors));
+        netflixSubGroup.append($('<p class="movieRating"></p>').text(data.Genre));
+        netflixSubGroup.append($('<p class="moviePlot"></p>').text(data.Plot));
+        netflixSubGroup.append($('<p class="movieScore"></p>').text(data.imdbRating + '/10'));
+        netflixSubGroup.append($('<img>').attr('src', data.Poster));
+
+
+
+
+        netflixGroup.append(netflixSubGroup);
+      $('.netflixContent').empty().append(netflixGroup);
+    })
+
+  })
+})
