@@ -7,7 +7,7 @@ function loadDrink(e) {
   } else {
     $.ajax({
       //   Following link will return a random drink
-          url: 'http://www.thecocktaildb.com/api/json/v1/1/random.php',
+          url: 'https://www.thecocktaildb.com/api/json/v1/1/random.php',
 
       // Following link returns an object with an array of fine different drinks as objects
       //  url: 'http://lcboapi.com/products?per_page=5q=' + drinkReq ,
