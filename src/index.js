@@ -5,19 +5,41 @@ function loadDrink(e) {
     alert('Don\'t forget to enter your drink!')
   } else {
     $.ajax({
-      url: 'http://lcboapi.com/products?q=' + drinkReq ,
-       headers: { 'Authorization': 'Token MDphZjIxYTU4NC1iMzczLTExZTYtYjY4ZC02YjdkMTY3MDNhMDI6RDlGU09jVUV6bXJGUWN1anlLTEc2emRsQWxuY2daN2w5TENy' }
-}).then(function(result){
-      console.log(result);
+      //   Following link will return a random drink
+          url: 'http://www.thecocktaildb.com/api/json/v1/1/random.php',
+
+      // Following link returns an object with an array of fine different drinks as objects
+      //  url: 'http://lcboapi.com/products?per_page=5q=' + drinkReq ,
+      //  headers: { 'Authorization': 'Token MDphZjIxYTU4NC1iMzczLTExZTYtYjY4ZC02YjdkMTY3MDNhMDI6RDlGU09jVUV6bXJGUWN1anlLTEc2emRsQWxuY2daN2w5TENy' }
+}).then(function(data){
+      console.log(data);
       var drinkGroup = $('<div class="group"></div>')
+    $.each(data.drinks, function(req, res){
       var drinkSubGroup = $('<div class="subgroup"></div>')
-        drinkSubGroup.append($('<h1 class="drinkTitle"></h1>').text(products.result.name));
-        drinkSubGroup.append($('<p class="drinkType"></p>').text(result.primary_category));
-        drinkSubGroup.append($('<p class="drinkPrice></p>').text(result.price_in_cents));
-        drinkSubGroup.append($('<p class="drinkOrigin"></p>').text(result.origin));
-        drinkSubGroup.append($('<p class="drinkServing"></p>').text(result.serving_suggestion));
+        drinkSubGroup.append($('<h1 class="drinkTitle"></h1>').text(res.strDrink));
+        drinkSubGroup.append($('<p class="drinkPic"></p>').attr('href',res.strDrinkThumb));
+
+        drinkSubGroup.append($('<h3 class="drinkIngredientList"></h3>').text('Ingredients'));
+        drinkSubGroup.append($('<p class="drinkIngredient"></p>').text(res.strMeasure1 + res.strIngredient1));
+        drinkSubGroup.append($('<p class="drinkIngredient"></p>').text(res.strMeasure2 + res.strIngredient2));
+        drinkSubGroup.append($('<p class="drinkIngredient"></p>').text(res.strMeasure3 + res.strIngredient3));
+        drinkSubGroup.append($('<p class="drinkIngredient"></p>').text(res.strMeasure4 + res.strIngredient4));
+        drinkSubGroup.append($('<p class="drinkIngredient"></p>').text(res.strMeasure5 + res.strIngredient5));
+        drinkSubGroup.append($('<p class="drinkIngredient"></p>').text(res.strMeasure6 + res.strIngredient6));
+        drinkSubGroup.append($('<p class="drinkIngredient"></p>').text(res.strMeasure7 + res.strIngredient7));
+        drinkSubGroup.append($('<p class="drinkIngredient"></p>').text(res.strMeasure8 + res.strIngredient8));
+        drinkSubGroup.append($('<p class="drinkIngredient"></p>').text(res.strMeasure9 + res.strIngredient9));
+        drinkSubGroup.append($('<p class="drinkIngredient"></p>').text(res.strMeasure10 + res.strIngredient10));
+
+        drinkSubGroup.append($('<h4 class="howtomake"></h4>').text('Directions'));
+        drinkSubGroup.append($('<p class="drinkInstructions"></p>').text(res.strInstructions));
+
+
+        drinkSubGroup.append($('<p class="drinkCategroy"></p>').text(res.strCategory));
+        drinkSubGroup.append($('<p class="drinkAlcoholic"></p>').text(res.strAlcoholic));
         drinkGroup.append(drinkSubGroup);
-        $('.chillcontent').append(drinkGroup);
+        })
+        $('.chill').empty().append(drinkGroup);
 
     });
   }
