@@ -8,11 +8,12 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-font-smoothing: subpixel-antialiased;
 }
 
 header {
   background-color: #E50914;
-  padding: 4rem;
+  padding: 3rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
 }
 
@@ -20,16 +21,36 @@ h1 {
   display:flex;
   font-family:'Netflix', sans-serif;
   font-size: 50px;
-  margin:0;
+  margin: 0;
   padding:0;
 }
 
+p {
+  margin: 0;
+  padding: 10px;
+}
+
 button {
-  padding:5px;
+  padding:10px;
 }
 
 .netflixContent {
-  width: 40%;
+  width: 100%;
+
+}
+
+.netflixSubGroup {
+  font-size: 18px;
+  padding: 0 2rem 0 2rem;
+  width: 50%;
+  margin-top: 2rem;
+
+}
+.movieName {
+  font-family: 'Netflix';
+  font-size: 32px;
+  margin: 0;
+  padding: 0;
 }
 
 .moviePoster {

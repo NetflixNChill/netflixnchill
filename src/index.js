@@ -21,7 +21,7 @@ $(function() {
 
 
         netflixGroup.append(netflixSubGroup);
-      $('.netflixContent').empty().append(netflixGroup);
+      $('.netflixContent').empty().append(netflixGroup).show('slow');
     })
 
   })
