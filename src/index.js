@@ -72,10 +72,10 @@ $(function() {
         netflixSubGroup.append($('<p class="movieRating"></p>').text(data.Genre));
         netflixSubGroup.append($('<p class="moviePlot"></p>').text(data.Plot));
         netflixSubGroup.append($('<p class="movieScore"></p>').text(data.imdbRating + '/10'));
-
+        
         netflixGroup.append(netflixSubGroup);
+        $('.netflixContent').empty().append(netflixGroup).show('slow');
     })
-    $('.netflixContent').empty().append(netflixGroup).show('slow');
 
   })
 })
