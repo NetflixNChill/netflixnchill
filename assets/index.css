@@ -15,10 +15,13 @@ header {
   background-color: #E50914;
   padding: 3rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+  display: flex;
+  justify-content: center;
 }
 
 h1 {
   display:flex;
+  justify-content: center;
   font-family:'Netflix', sans-serif;
   font-size: 50px;
   margin: 0;
@@ -32,18 +35,28 @@ p {
 
 button {
   padding:10px;
+  }
+
+.loader {
+  display: flex;
+  justify-content: center;
+}
+.chillTitle {
+  padding-left: 1rem;
 }
 
 .netflixContent {
   width: 100%;
-
 }
 
 .netflixSubGroup {
   font-size: 18px;
   padding: 0 2rem 0 2rem;
-  width: 50%;
+  width: 30%;
   margin-top: 2rem;
+  text-align: center;
+  border: 2px outset white;
+
 
 }
 .movieName {
