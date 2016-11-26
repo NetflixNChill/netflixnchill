@@ -1,0 +1,38 @@
+@font-face {
+  font-family: 'Netflix';
+  src: url(BebasNeue.otf);
+}
+
+
+html, body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  background-color: #E50914;
+  padding: 4rem;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
+}
+
+h1 {
+  display:flex;
+  font-family:'Netflix', sans-serif;
+  font-size: 50px;
+  margin:0;
+  padding:0;
+}
+
+button {
+  padding:5px;
+}
+
+.netflixContent {
+  width: 40%;
+}
+
+.moviePoster {
+  max-width: 300px;
+  max-height: 300px;
+}
