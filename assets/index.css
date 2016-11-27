@@ -3,8 +3,8 @@
   src: url(BebasNeue.otf);
 }
 
-
 html, body {
+  z-index: 10;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,19 +12,11 @@ html, body {
 }
 header {
   background-color: #E50914;
-  padding: 4rem;
+  z-index: 50;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
-  display: flex;
   justify-content: center;
-}
-
-.backgroundPic {
-  background-image: url("popcornpic.jpg") repeat-y;
-  opacity: .6;
-  z-index: -100;
-  position: absolute;
-  width: 100%;
-  border: 2px solid white;
+  padding: 2rem 0 2rem 0;
+  border-bottom: 1px groove whitesmoke;
 }
 
 h1 {
@@ -34,6 +26,17 @@ h1 {
   font-size: 50px;
   margin: 0;
   padding:0;
+}
+
+.backgroundPic {
+    background-image: url('popcornpic.jpg');
+    background-size: cover;
+    opacity: .6;
+    z-index: -100;
+    height: 1300px;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 
 p {
@@ -50,7 +53,7 @@ button {
 .loaders {
   display: flex;
   justify-content: center;
-  margin: 0 2rem 0 2rem;
+  margin: 2rem 2rem 0 2rem;
 }
 
 .drinkReq {
