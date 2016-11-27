@@ -10,13 +10,21 @@ html, body {
   box-sizing: border-box;
   -webkit-font-smoothing: subpixel-antialiased;
 }
-
 header {
   background-color: #E50914;
-  padding: 3rem;
+  padding: 6rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
   display: flex;
   justify-content: center;
+}
+
+.backgroundPic {
+  background-image: url("popcornpic.jpg") repeat-y;
+  opacity: .4;
+  z-index: -100;
+  position: absolute;
+  width: 100%;
+  border: 2px solid white;
 }
 
 h1 {
@@ -34,28 +42,32 @@ p {
 }
 
 button {
+  font-family: 'Netflix';
   padding:10px;
+  font-size: 20px;
   }
 
-.loader {
+.loaders {
   display: flex;
   justify-content: center;
+  margin: 0 2rem 0 2rem;
 }
+
+.drinkReq {
+  line-height: 30px;
+}
+
 .chillTitle {
   padding-left: 1rem;
 }
 
-.netflixContent {
-  width: 100%;
-}
-
 .netflixSubGroup {
+  font-family: 'Netflix';
   font-size: 18px;
   padding: 0 2rem 0 2rem;
   width: 30%;
   margin-top: 2rem;
   text-align: center;
-  border: 2px outset white;
 
 
 }

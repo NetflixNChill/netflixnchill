@@ -1,10 +1,14 @@
+//
+// function loadDrink(e) {
+//    e.preventDefault();
+  // var drinkReq = $('.drinkReq').val();
+  // if (drinkReq === '' || typeof drinkReq == null || typeof drinkReq == undefined) {
+  //   alert('Don\'t forget to enter your drink!')
+  // } else {
+$(function() {
 
-function loadDrink(e) {
-   e.preventDefault();
-  var drinkReq = $('.drinkReq').val();
-  if (drinkReq === '' || typeof drinkReq == null || typeof drinkReq == undefined) {
-    alert('Don\'t forget to enter your drink!')
-  } else {
+  $('.searchshow').on('click', function() {
+
     $.ajax({
       //   Following link will return a random drink
           url: 'https://www.thecocktaildb.com/api/json/v1/1/random.php',
@@ -12,7 +16,7 @@ function loadDrink(e) {
       // Following link returns an object with an array of fine different drinks as objects
       //  url: 'http://lcboapi.com/products?per_page=5q=' + drinkReq ,
       //  headers: { 'Authorization': 'Token MDphZjIxYTU4NC1iMzczLTExZTYtYjY4ZC02YjdkMTY3MDNhMDI6RDlGU09jVUV6bXJGUWN1anlLTEc2emRsQWxuY2daN2w5TENy' }
-}).then(function(data){
+    }).then(function(data){
       console.log(data);
       var drinkGroup = $('<div class="group"></div>')
     $.each(data.drinks, function(req, res){
@@ -43,10 +47,10 @@ function loadDrink(e) {
         $('.chill').empty().append(drinkGroup);
 
     });
-  }
- }
+  })
+})
 
- $('.searchshow').on("submit", loadDrink);
+ // $('.searchshow').on("submit", loadDrink);
 
 
 
@@ -74,8 +78,8 @@ $(function() {
         netflixSubGroup.append($('<p class="movieScore"></p>').text(data.imdbRating + '/10'));
 
         netflixGroup.append(netflixSubGroup);
-        $('.netflixContent').empty().append(netflixGroup).show('slow');
+        $('.netflixContent').empty().append(netflixGroup);
     })
 
   })
-})
+});
