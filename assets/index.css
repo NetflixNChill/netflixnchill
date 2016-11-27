@@ -12,7 +12,7 @@ html, body {
 }
 header {
   background-color: #E50914;
-  padding: 6rem;
+  padding: 4rem;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.4);
   display: flex;
   justify-content: center;
@@ -20,7 +20,7 @@ header {
 
 .backgroundPic {
   background-image: url("popcornpic.jpg") repeat-y;
-  opacity: .4;
+  opacity: .6;
   z-index: -100;
   position: absolute;
   width: 100%;
