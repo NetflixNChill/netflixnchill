@@ -76,12 +76,17 @@ button {
 }
 .movieName {
   font-family: 'Netflix';
-  font-size: 32px;
+  font-size: 50px;
   margin: 0;
   padding: 0;
+  text-shadow: 6px 6px 2px #666;
+}
+.drinkTitle {
+  text-shadow: 6px 6px 2px #666;
 }
 
 .moviePoster {
+  box-shadow: 6px 6px 2px #666;
   max-height: 300px;
   max-width: 300px;
   outline-style: ridge;
@@ -90,6 +95,7 @@ button {
 .drinkPic {
   border: 2px solid #E50020;
   border-style: ridge;
+  box-shadow: 6px 6px 2px #666;
   max-height: 300px;
   max-width: 300px;
 }
@@ -105,10 +111,12 @@ button {
   width: 50%;
 }
 .subgroup {
+  font-family: 'Netflix';
+  font-size: 18px;
   margin-top: 2rem;
 }
 
 .drinkIngredient {
   display: inline-block;
-  width: 50%;;
+  text-align: center;
 }
