@@ -21,7 +21,7 @@ $(function() {
       var drinkGroup = $('<div class="group"></div>')
     $.each(data.drinks, function(req, res){
       var drinkSubGroup = $('<div class="subgroup"></div>')
-        drinkSubGroup.append($('<h1 class="drinkTitle"></h1>').text(res.strDrink));
+        drinkSubGroup.append($('<h1 class="drinkTitle"></h1>'+ '<br>').text(res.strDrink));
         drinkSubGroup.append($('<img class="drinkPic"></img>').attr('src',res.strDrinkThumb));
 
         drinkSubGroup.append($('<h3 class="drinkIngredientList"></h3>').text('Ingredients'));
