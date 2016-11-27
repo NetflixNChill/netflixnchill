@@ -17,6 +17,7 @@ header {
   justify-content: center;
   padding: 2rem 0 2rem 0;
   text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
+  width: 100%;
   z-index: 50;
 }
 
@@ -46,8 +47,12 @@ p {
 }
 
 button {
+  background-color: #EBEBEB;
+  border-radius: 5px;
   font-family: 'Netflix';
   font-size: 20px;
+  margin: 0 5px 0 5px;
+  outline-style: none;
   padding: 10px;
 }
 
@@ -68,7 +73,7 @@ button {
 .netflixSubGroup {
   border-right: 2px solid #E50020;
   font-family: 'Netflix';
-  font-size: 18px;
+  font-size: 24px;
   margin-top: 2rem;
   /*padding: 0 2rem 0 2rem;*/
   text-align: center;
@@ -86,10 +91,10 @@ button {
 }
 
 .moviePoster {
+  border: 2px solid #E50020;
   box-shadow: 6px 6px 2px #666;
   max-height: 300px;
   max-width: 300px;
-  outline-style: ridge;
 }
 
 .drinkPic {
@@ -110,13 +115,20 @@ button {
   text-align: center;
   width: 50%;
 }
+.group {
+  border-left: 2px solid #E50020;
+}
 .subgroup {
   font-family: 'Netflix';
-  font-size: 18px;
+  font-size: 24px;
   margin-top: 2rem;
 }
-
 .drinkIngredient {
   display: inline-block;
-  text-align: center;
+  justify-content: center;
+}
+.moviePlot,
+.movieActors,
+.drinkInstructions {
+  padding: 0 60px 0 60px;
 }

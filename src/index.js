@@ -17,7 +17,7 @@ $(function() {
       //  url: 'http://lcboapi.com/products?per_page=5q=' + drinkReq ,
       //  headers: { 'Authorization': 'Token MDphZjIxYTU4NC1iMzczLTExZTYtYjY4ZC02YjdkMTY3MDNhMDI6RDlGU09jVUV6bXJGUWN1anlLTEc2emRsQWxuY2daN2w5TENy' }
     }).then(function(data){
-      console.log(data);
+      // console.log(data);
       var drinkGroup = $('<div class="group"></div>')
     $.each(data.drinks, function(req, res){
       var drinkSubGroup = $('<div class="subgroup"></div>')
@@ -36,13 +36,13 @@ $(function() {
         drinkSubGroup.append($('<p class="drinkIngredient"></p>').text(res.strMeasure9 + res.strIngredient9));
         drinkSubGroup.append($('<p class="drinkIngredient"></p>').text(res.strMeasure10 + res.strIngredient10));
 
-        drinkSubGroup.append($('<h4 class="howtomake"></h4>').text('Directions'));
+        drinkSubGroup.append($('<h3 class="howtomake"></h3>').text('Directions'));
         drinkSubGroup.append($('<p class="drinkInstructions"></p>').text(res.strInstructions));
 
-
-        drinkSubGroup.append($('<p class="drinkCategroy"></p>').text(res.strCategory));
-        drinkSubGroup.append($('<p class="drinkAlcoholic"></p>').text(res.strAlcoholic));
+        drinkSubGroup.append($('<h3 class="glass"></h3>').text('Serve In'));
+        drinkSubGroup.append($('<p class="drinkCategroy"></p>').text(res.strGlass));
         drinkGroup.append(drinkSubGroup);
+
         })
         $('.chill').empty().append(drinkGroup);
 
@@ -65,17 +65,17 @@ $(function() {
       url: 'https://random-movie.herokuapp.com/random',
       dataType:'jsonp'
     }).then(function(data){
-      console.log(data);
+      // console.log(data);
       var netflixGroup = $('<div class="netflixGroup"></div>');
       var netflixSubGroup = $('<div class="netflixSubGroup"></div>');
         netflixSubGroup.append($('<h2 class="movieName"></h2>' + '<br>').text(data.Title));
-        netflixSubGroup.append($('<img class="moviePoster">').attr('src', data.Poster));
-        netflixSubGroup.append($('<p class="movieYear"></p>').text(data.Year));
-        netflixSubGroup.append($('<p class="movieRating"></p>').text('Rated: ' + data.Rated));
-        netflixSubGroup.append($('<p class="movieActors"></p>').text(data.Actors));
-        netflixSubGroup.append($('<p class="movieRating"></p>').text(data.Genre));
-        netflixSubGroup.append($('<p class="moviePlot"></p>').text(data.Plot));
-        netflixSubGroup.append($('<p class="movieScore"></p>').text(data.imdbRating + '/10'));
+        netflixSubGroup.append($('<img class="moviePoster">'+ '<br>').attr('src', data.Poster));
+        netflixSubGroup.append($('<p class="movieYear"></p>'+ '<br>').text(data.Year));
+        netflixSubGroup.append($('<p class="movieRating"></p>'+ '<br>').text('Rated: ' + data.Rated));
+        netflixSubGroup.append($('<p class="movieActors"></p>'+ '<br>').text(data.Actors));
+        netflixSubGroup.append($('<p class="movieRating"></p>'+ '<br>').text(data.Genre));
+        netflixSubGroup.append($('<p class="moviePlot"></p>'+ '<br>').text(data.Plot));
+        netflixSubGroup.append($('<p class="movieScore"></p>'+ '<br>').text(data.imdbRating + '/10'));
 
         netflixGroup.append(netflixSubGroup);
         $('.netflixContent').empty().append(netflixGroup);
