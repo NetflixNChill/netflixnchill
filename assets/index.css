@@ -84,10 +84,14 @@ button {
   font-size: 50px;
   margin: 0;
   padding: 0;
-  text-shadow: 6px 6px 2px #666;
+  text-shadow: 3px 3px 2px #666;
 }
 .drinkTitle {
-  text-shadow: 6px 6px 2px #666;
+  font-family: 'Netflix';
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+  text-shadow: 3px 3px 2px #666;
 }
 
 .moviePoster {
