@@ -9,5 +9,5 @@ It's a very simple design that pulls two different API's into the project. The a
 
 ####Contact us!
 
->Logan Hussung - Twitter - @logan_hussung
->Bill Gottsch - Twitter - @billygottsch
+#####Logan Hussung - Twitter - @logan_hussung
+#####Bill Gottsch - Twitter - @billygottsch
