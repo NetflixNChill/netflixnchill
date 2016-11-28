@@ -17,28 +17,30 @@ header {
   justify-content: center;
   padding: 2rem 0 2rem 0;
   text-shadow: 0 1px 0 rgba(255, 255, 255, .4);
-  width: 100%;
+  width: 100vw;
   z-index: 50;
 }
 
 h1 {
+  color: white;
   display: flex;
   font-family: 'Netflix', sans-serif;
-  font-size: 50px;
+  font-size: 90px;
   justify-content: center;
   margin: 0;
   padding: 0;
+  text-shadow: 3px 3px 2px black;
 }
 
 .backgroundPic {
   background-image: url('popcornpic.jpg');
   background-size: cover;
-  height: 1300px;
-  opacity: .6;
+  height: 100vh;
+  opacity: .4;
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: -100;
+  z-index: -100;;
 }
 
 p {
@@ -97,16 +99,16 @@ button {
 .moviePoster {
   border: 2px solid #E50020;
   box-shadow: 6px 6px 2px #666;
-  max-height: 300px;
-  max-width: 300px;
+  max-height: 50%;
+  max-width: 50%;
 }
 
 .drinkPic {
   border: 2px solid #E50020;
   border-style: ridge;
   box-shadow: 6px 6px 2px #666;
-  max-height: 300px;
-  max-width: 300px;
+  max-height: 50%;
+  max-width: 50%;
 }
 
 .searchContent {
