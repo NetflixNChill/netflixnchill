@@ -7,7 +7,7 @@ This app was created to make that stay-in date night easier for couples! Netflix
 
 It's a very simple design that pulls two different API's into the project. The app was created as an assignment for The Iron Yard.
 
-#Contact us!
+####Contact us!
 
 Logan Hussung - Twitter - @logan_hussung
 Bill Gottsch - Twitter - @billygottsch
