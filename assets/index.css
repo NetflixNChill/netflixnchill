@@ -111,19 +111,15 @@ button {
   max-width: 50%;
 }
 
-.searchContent {
-  display: flex;
-}
 .netflixContent {
-  width: 50%;
+  border-bottom: 2px solid #E50020;
+  width: 100%;
 }
 .chill {
   text-align: center;
-  width: 50%;
+  width: 100%;
 }
-.group {
-  border-left: 2px solid #E50020;
-}
+
 .subgroup {
   font-family: 'Netflix';
   font-size: 24px;
@@ -137,4 +133,20 @@ button {
 .movieActors,
 .drinkInstructions {
   padding: 0 60px 0 60px;
+}
+
+@media (min-width: 450px) {
+  .searchContent {
+    display: flex;
+  }
+  .netflixContent {
+    width: 50%;
+  }
+  .chill {
+    text-align: center;
+    width: 50%;
+  }
+  .group {
+    border-left: 2px solid #E50020;
+  }
 }
