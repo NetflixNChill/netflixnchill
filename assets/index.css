@@ -116,6 +116,7 @@ button {
   width: 100%;
 }
 .chill {
+  border-bottom: 2px solid #E50020;
   text-align: center;
   width: 100%;
 }
